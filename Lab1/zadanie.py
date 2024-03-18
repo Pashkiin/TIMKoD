@@ -35,7 +35,7 @@ def generate_text(markov_list, initial_text, length, order):
             sum_values += item[1]
             sum_markov_list.append((item[0], sum_values))
 
-        random_num = random.randint(sum_markov_list[0][1], sum_markov_list[-1][1])
+        random_num = random.randint(0, sum_markov_list[-1][1])
         for item in sum_markov_list:
             if random_num <= item[1]:
                 current_sign = item[0]
@@ -47,7 +47,7 @@ def generate_text(markov_list, initial_text, length, order):
 
 def main():
     table = read_file('norm_hamlet.txt')
-    frequency_dict = create_frequency_dict(table[0])
+    #frequency_dict = create_frequency_dict(table[0])
 
     markov_list = create_markov_list(table[0], 1)
     markov_list_3rd = create_markov_list(table[0], 3)
