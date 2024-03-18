@@ -53,9 +53,9 @@ def main():
     markov_list_3rd = create_markov_list(table[0], 3)
     markov_list_5th = create_markov_list(table[0], 5)
 
-    print("Test dla zrodla pierwszego rzedu: ", generate_text(markov_list, "t", 1000, 1))
-    print("Test dla zrodla trzeciego rzedu: ", generate_text(markov_list_3rd, "To be", 1000, 3))
-    print("Test dla zrodla piatego rzedu: ", generate_text(markov_list_5th, "Probability", 1000, 5))
+    print("################################# \n Test dla zrodla pierwszego rzedu: ", generate_text(markov_list, "t", 1000, 1), "\n################################# \n")
+    print("################################# \n Test dla zrodla trzeciego rzedu: ", generate_text(markov_list_3rd, "To be", 1000, 3), "\n################################# \n")
+    print("################################# \n Test dla zrodla piatego rzedu: ", generate_text(markov_list_5th, "Probability", 1000, 5), "\n################################# \n")
 
 if __name__ == "__main__":
     main()
