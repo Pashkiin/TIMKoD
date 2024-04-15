@@ -15,9 +15,15 @@ def generuj_tekst(zrodlo_markowa, dlugosc_tekstu):
             klucz = random.choice(list(zrodlo_markowa.keys()))
     return ' '.join(tekst)
 
-def generuj_tekst2(zrodlo_markowa, dlugosc_tekstu):
+def generuj_tekst2(zrodlo_markowa, dlugosc_tekstu, start_word=None):
     tekst = []
-    klucz = random.choice(list(zrodlo_markowa.keys()))  # losowy klucz
+    # Find a key that starts with the start_word
+    if start_word is not None:
+        klucz = next((k for k in zrodlo_markowa.keys() if k[0][0] == start_word), None)
+    else:
+        print(f"No key found , using a random key instead.")
+        klucz = random.choice(list(zrodlo_markowa.keys()))  # losowy klucz
+        
     slowo  =  klucz[0][0]
     slowo2 = klucz[0][1]
     tekst.append(slowo)  # convert tuple to string and add to tekst
@@ -76,10 +82,13 @@ def main():
     dlugosc_tekstu = 100
     wygenerowany_tekst_pierwszy = generuj_tekst(tabela_markowa_pierwszy, dlugosc_tekstu)
     wygenerowany_tekst_drugi = generuj_tekst2(tabela_markowa_drugi, dlugosc_tekstu)
+    wygenerowany_tekst_drugi_prob = generuj_tekst2(tabela_markowa_drugi, dlugosc_tekstu, start_word="probability")
     analiza_slow(tabela_slow)
     print("Wygenerowany tekst dla pierwszego rzędu:", wygenerowany_tekst_pierwszy)
     print("##############################################################################################################")
     print("Wygenerowany tekst dla drugiego rzędu:", wygenerowany_tekst_drugi)
+    print("##############################################################################################################")
+    print("Wygenerowany tekst dla drugiego rzędu z początkiem probability:", wygenerowany_tekst_drugi_prob)
 
     # # Wyświetlenie tabeli markowej
     # for para, czestosc in tabela_markowa.items():
