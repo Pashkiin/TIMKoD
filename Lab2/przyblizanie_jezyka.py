@@ -3,25 +3,38 @@ import os
 import random
 
 def generuj_tekst(zrodlo_markowa, dlugosc_tekstu):
-    order = len(next(iter(zrodlo_markowa.keys()))) - 1
-    poczatkowe_slowa = random.choice(list(zrodlo_markowa.keys()))
-    wygenerowany_tekst = []
-    for slowo in poczatkowe_slowa:
-        wygenerowany_tekst.append(slowo)
-        wygenerowany_tekst.append(' ')
+    tekst = []
+    klucz = random.choice(list(zrodlo_markowa.keys()))  # losowy klucz
+    for i in range(dlugosc_tekstu):
+        tekst.append(klucz[1])  # dodaje słowo do tekstu
+        mozliwe_klucze = [k for k in zrodlo_markowa if k[0] == klucz[1]]
+        if mozliwe_klucze:
+            wagi = [zrodlo_markowa[k] for k in mozliwe_klucze]
+            klucz = random.choices(mozliwe_klucze, weights=wagi, k=1)[0]
+        else:
+            klucz = random.choice(list(zrodlo_markowa.keys()))
+    return ' '.join(tekst)
 
-    while len(wygenerowany_tekst) < dlugosc_tekstu:
-        ostatnie_slowa = tuple(wygenerowany_tekst[-order:])
-        mozliwe_klucze = [klucz for klucz in zrodlo_markowa.keys() if klucz[:order] == ostatnie_slowa]
-        if not mozliwe_klucze:
-            break
-        wagi = [zrodlo_markowa[klucz] for klucz in mozliwe_klucze]
-        wybrany_klucz = random.choices(mozliwe_klucze, weights=wagi, k=1)[0]
-        nastepne_slowo = wybrany_klucz[order]
-        wygenerowany_tekst.append(' ')
-        wygenerowany_tekst.append(nastepne_slowo)
+def generuj_tekst2(zrodlo_markowa, dlugosc_tekstu):
+    tekst = []
+    klucz = random.choice(list(zrodlo_markowa.keys()))  # losowy klucz
+    slowo  =  klucz[0][0]
+    slowo2 = klucz[0][1]
+    tekst.append(slowo)  # convert tuple to string and add to tekst
+    tekst.append(slowo2)  # convert tuple to string and add to tekst
 
-    return wygenerowany_tekst
+    for i in range(dlugosc_tekstu - 2):  # -2 because two words are already added
+        mozliwe_klucze = [k for k in zrodlo_markowa if k[:2] == klucz]
+        if mozliwe_klucze:
+            wagi = [zrodlo_markowa[k] for k in mozliwe_klucze]
+            klucz = random.choices(mozliwe_klucze, weights=wagi, k=1)
+            slowo = klucz[0][1]
+            tekst.append(slowo)  # convert tuple to string before adding to tekst
+        else:
+            klucz = random.choice(list(zrodlo_markowa.keys()))
+            slowo = klucz[0]
+            tekst.extend(slowo)  # convert tuple to string and add to tekst
+    return ' '.join(tekst)
 
 def wczytaj_plik_do_tabeli(nazwa_pliku):
     tabela_slow = []
@@ -62,7 +75,7 @@ def main():
     # Wygenerowanie tekstu
     dlugosc_tekstu = 100
     wygenerowany_tekst_pierwszy = generuj_tekst(tabela_markowa_pierwszy, dlugosc_tekstu)
-    wygenerowany_tekst_drugi = generuj_tekst(tabela_markowa_drugi, dlugosc_tekstu)
+    wygenerowany_tekst_drugi = generuj_tekst2(tabela_markowa_drugi, dlugosc_tekstu)
     analiza_slow(tabela_slow)
     print("Wygenerowany tekst dla pierwszego rzędu:", wygenerowany_tekst_pierwszy)
     print("##############################################################################################################")
