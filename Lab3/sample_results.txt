@@ -1,0 +1,32 @@
+sample0.txt, Entropy of words: 7.7487413861401295
+sample0.txt, Entropy of characters: 4.273001240566633
+sample1.txt, Entropy of words: 11.500700199498642
+sample1.txt, Entropy of characters: 4.1270061355497205
+sample2.txt, Entropy of words: 8.023869815826425
+sample2.txt, Entropy of characters: 3.9933118002325836
+sample3.txt, Entropy of words: 9.061122986146984
+sample3.txt, Entropy of characters: 3.9302978341579875
+sample4.txt, Entropy of words: 17.129669111070662
+sample4.txt, Entropy of characters: 4.253809567379015
+sample5.txt, Entropy of words: 16.509437287775633
+sample5.txt, Entropy of characters: 4.441688018481797
+sample0.txt, Conditional entropy of bigrams: 2.6030061749069673
+sample0.txt, Conditional entropy of trigrams: 2.0003592449340295
+sample1.txt, Conditional entropy of bigrams: 3.0712406173916493
+sample1.txt, Conditional entropy of trigrams: 2.861279684784113
+sample2.txt, Conditional entropy of bigrams: 2.6433573831407045
+sample2.txt, Conditional entropy of trigrams: 2.467660235739306
+sample3.txt, Conditional entropy of bigrams: 2.9506574660684595
+sample3.txt, Conditional entropy of trigrams: 2.627895709506982
+sample4.txt, Conditional entropy of bigrams: 3.9144321758459166
+sample4.txt, Conditional entropy of trigrams: 4.226828937890713
+sample5.txt, Conditional entropy of bigrams: 3.5230981260850065
+sample5.txt, Conditional entropy of trigrams: 3.250620854647967
+
+outcome:
+sample0 - real
+sample1 - real
+sample2 - real
+sample3 - real
+sample4 - fake, unconditional entropy of words too big
+sample5 - fake, unconditional entropy of words too big

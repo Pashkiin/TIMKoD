@@ -1,0 +1,14 @@
+norm_wiki_en.txt, Conditional entropy of bigrams: 3.2348669134462598
+norm_wiki_en.txt, Conditional entropy of trigrams: 3.0183191907840388
+norm_wiki_eo.txt, Conditional entropy of bigrams: 3.0775003773503435
+norm_wiki_eo.txt, Conditional entropy of trigrams: 2.871826798759517
+norm_wiki_et.txt, Conditional entropy of bigrams: 3.284852395828214
+norm_wiki_et.txt, Conditional entropy of trigrams: 3.1344061132057193
+norm_wiki_ht.txt, Conditional entropy of bigrams: 2.867791952092448
+norm_wiki_ht.txt, Conditional entropy of trigrams: 2.2735248312675
+norm_wiki_la.txt, Conditional entropy of bigrams: 3.13654176496858
+norm_wiki_la.txt, Conditional entropy of trigrams: 2.8234920125303113
+norm_wiki_nv.txt, Conditional entropy of bigrams: 2.587037267208034
+norm_wiki_nv.txt, Conditional entropy of trigrams: 2.3675796217851945
+norm_wiki_so.txt, Conditional entropy of bigrams: 3.02776299736853
+norm_wiki_so.txt, Conditional entropy of trigrams: 2.8443716239168686

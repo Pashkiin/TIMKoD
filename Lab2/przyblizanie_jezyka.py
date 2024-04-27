@@ -15,31 +15,30 @@ def generuj_tekst(zrodlo_markowa, dlugosc_tekstu):
             klucz = random.choice(list(zrodlo_markowa.keys()))
     return ' '.join(tekst)
 
-def generuj_tekst2(zrodlo_markowa, dlugosc_tekstu, start_word=None):
+def generuj_tekst2(zrodlo_markowa, dlugosc_tekstu, poczatkowe_slowo=None):
     tekst = []
-    # Find a key that starts with the start_word
-    if start_word is not None:
-        klucz = next((k for k in zrodlo_markowa.keys() if k[0][0] == start_word), None)
+    # Znajdz klucze z poczatkowym slowem
+    if poczatkowe_slowo is not None:
+        klucz = next((k for k in zrodlo_markowa.keys() if k[0][0] == poczatkowe_slowo), None)
     else:
         print(f"No key found , using a random key instead.")
         klucz = random.choice(list(zrodlo_markowa.keys()))  # losowy klucz
         
     slowo  =  klucz[0][0]
     slowo2 = klucz[0][1]
-    tekst.append(slowo)  # convert tuple to string and add to tekst
-    tekst.append(slowo2)  # convert tuple to string and add to tekst
-
-    for i in range(dlugosc_tekstu - 2):  # -2 because two words are already added
+    tekst.append(slowo)  
+    tekst.append(slowo2) 
+    for i in range(dlugosc_tekstu - 2):  # -2 bo 2 slowa sa juz dodane
         mozliwe_klucze = [k for k in zrodlo_markowa if k[:2] == klucz]
         if mozliwe_klucze:
             wagi = [zrodlo_markowa[k] for k in mozliwe_klucze]
             klucz = random.choices(mozliwe_klucze, weights=wagi, k=1)
             slowo = klucz[0][1]
-            tekst.append(slowo)  # convert tuple to string before adding to tekst
+            tekst.append(slowo) 
         else:
             klucz = random.choice(list(zrodlo_markowa.keys()))
             slowo = klucz[0]
-            tekst.extend(slowo)  # convert tuple to string and add to tekst
+            tekst.extend(slowo)
     return ' '.join(tekst)
 
 def wczytaj_plik_do_tabeli(nazwa_pliku):
@@ -82,7 +81,7 @@ def main():
     dlugosc_tekstu = 100
     wygenerowany_tekst_pierwszy = generuj_tekst(tabela_markowa_pierwszy, dlugosc_tekstu)
     wygenerowany_tekst_drugi = generuj_tekst2(tabela_markowa_drugi, dlugosc_tekstu)
-    wygenerowany_tekst_drugi_prob = generuj_tekst2(tabela_markowa_drugi, dlugosc_tekstu, start_word="probability")
+    wygenerowany_tekst_drugi_prob = generuj_tekst2(tabela_markowa_drugi, dlugosc_tekstu, poczatkowe_slowo="probability")
     analiza_slow(tabela_slow)
     print("Wygenerowany tekst dla pierwszego rzędu:", wygenerowany_tekst_pierwszy)
     print("##############################################################################################################")
