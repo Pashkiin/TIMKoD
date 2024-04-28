@@ -10,23 +10,47 @@ sample4.txt, Entropy of words: 17.129669111070662
 sample4.txt, Entropy of characters: 4.253809567379015
 sample5.txt, Entropy of words: 16.509437287775633
 sample5.txt, Entropy of characters: 4.441688018481797
+
+Average entropy of words: 11.662256797743078
+Average entropy of characters: 4.169852432727956
+Min entropy of words: 7.7487413861401295
+Min entropy of characters: 3.9302978341579875
+Max entropy of words: 17.129669111070662
+Max entropy of characters: 4.441688018481797
+
 sample0.txt, Conditional entropy of bigrams: 2.6030061749069673
 sample0.txt, Conditional entropy of trigrams: 2.0003592449340295
+sample0.txt, Conditional entropy of quadgrams: 1.5392818308831178
 sample1.txt, Conditional entropy of bigrams: 3.0712406173916493
 sample1.txt, Conditional entropy of trigrams: 2.861279684784113
+sample1.txt, Conditional entropy of quadgrams: 2.326684740548095
 sample2.txt, Conditional entropy of bigrams: 2.6433573831407045
 sample2.txt, Conditional entropy of trigrams: 2.467660235739306
+sample2.txt, Conditional entropy of quadgrams: 1.9397723261083073
 sample3.txt, Conditional entropy of bigrams: 2.9506574660684595
 sample3.txt, Conditional entropy of trigrams: 2.627895709506982
+sample3.txt, Conditional entropy of quadgrams: 2.023991488550604
 sample4.txt, Conditional entropy of bigrams: 3.9144321758459166
 sample4.txt, Conditional entropy of trigrams: 4.226828937890713
+sample4.txt, Conditional entropy of quadgrams: 4.178535148281953
 sample5.txt, Conditional entropy of bigrams: 3.5230981260850065
 sample5.txt, Conditional entropy of trigrams: 3.250620854647967
+sample5.txt, Conditional entropy of quadgrams: 2.834271485616726
 
-outcome:
-sample0 - real
-sample1 - real
-sample2 - real
-sample3 - real
-sample4 - fake, unconditional entropy of words too big
-sample5 - fake, unconditional entropy of words too big
+Average conditional entropy of bigrams: 3.1176319905731176
+Average conditional entropy of trigrams: 2.9057741112505187
+Average conditional entropy of quadgrams: 2.473756169998134
+Min conditional entropy of bigrams: 2.6030061749069673
+Min conditional entropy of trigrams: 2.0003592449340295
+Min conditional entropy of quadgrams: 1.5392818308831178
+Max conditional entropy of bigrams: 3.9144321758459166
+Max conditional entropy of trigrams: 4.226828937890713
+Max conditional entropy of quadgrams: 4.178535148281953
+
+Results:
+sample0 - true : wszystkie wartości entropii oraz entropii warunkowej na niskim poziomie
+sample1 - true : wartości entropii oraz entropii warunkowej wyższe jednak zawierają się w granicach danych testowych
+sample2 - true : niskie wartości entropii, a wartości entropii warunkowej w okolicach średnich z danych testowych
+sample3 - true : dobre wartości entropii, a wartości entropii warunkowej bardzo blisko średnich z danych testowych
+sample4 - false : entropia słów jest zdecydowanie za duża w porównaniu do danych testowych
+sample5 - false : entropia słów jest zdecydowanie za duża w porównaniu do danych testowych

@@ -1,14 +1,54 @@
-norm_wiki_en.txt, Conditional entropy of bigrams: 3.2348669134462598
+norm_wiki_en.txt, Entropy of words: 11.543988981011767
+norm_wiki_en.txt, Entropy of characters: 4.288221453845133
+norm_wiki_eo.txt, Entropy of words: 11.560530772438234
+norm_wiki_eo.txt, Entropy of characters: 4.176788490262164
+norm_wiki_et.txt, Entropy of words: 13.746240000962546
+norm_wiki_et.txt, Entropy of characters: 4.169833224728488
+norm_wiki_ht.txt, Entropy of words: 8.166923612134559
+norm_wiki_ht.txt, Entropy of characters: 4.146385764101038
+norm_wiki_la.txt, Entropy of words: 11.969194044406713
+norm_wiki_la.txt, Entropy of characters: 4.228247465746814
+norm_wiki_nv.txt, Entropy of words: 9.154011830799025
+norm_wiki_nv.txt, Entropy of characters: 3.8749372588209434
+norm_wiki_so.txt, Entropy of words: 11.731100672771571
+norm_wiki_so.txt, Entropy of characters: 4.040113860382521
+
+Average entropy of words: 11.124569987789203
+Average entropy of characters: 4.132075359698157
+Min entropy of words: 8.166923612134559
+Min entropy of characters: 3.8749372588209434
+Max entropy of words: 13.746240000962546
+Max entropy of characters: 4.288221453845133
+
+norm_wiki_en.txt, Conditional entropy of bigrams: 3.1034874819516434
 norm_wiki_en.txt, Conditional entropy of trigrams: 3.0183191907840388
-norm_wiki_eo.txt, Conditional entropy of bigrams: 3.0775003773503435
+norm_wiki_en.txt, Conditional entropy of quadgrams: 2.481565919414786
+norm_wiki_eo.txt, Conditional entropy of bigrams: 2.89071669769251
 norm_wiki_eo.txt, Conditional entropy of trigrams: 2.871826798759517
-norm_wiki_et.txt, Conditional entropy of bigrams: 3.284852395828214
+norm_wiki_eo.txt, Conditional entropy of quadgrams: 2.3926250001745317
+norm_wiki_et.txt, Conditional entropy of bigrams: 3.073024933375471
 norm_wiki_et.txt, Conditional entropy of trigrams: 3.1344061132057193
-norm_wiki_ht.txt, Conditional entropy of bigrams: 2.867791952092448
+norm_wiki_et.txt, Conditional entropy of quadgrams: 2.6108656535505492
+norm_wiki_ht.txt, Conditional entropy of bigrams: 2.6593337337339933
 norm_wiki_ht.txt, Conditional entropy of trigrams: 2.2735248312675
-norm_wiki_la.txt, Conditional entropy of bigrams: 3.13654176496858
+norm_wiki_ht.txt, Conditional entropy of quadgrams: 1.4921524582642953
+norm_wiki_la.txt, Conditional entropy of bigrams: 2.947959515067941
 norm_wiki_la.txt, Conditional entropy of trigrams: 2.8234920125303113
-norm_wiki_nv.txt, Conditional entropy of bigrams: 2.587037267208034
+norm_wiki_la.txt, Conditional entropy of quadgrams: 2.1520313374200564
+norm_wiki_nv.txt, Conditional entropy of bigrams: 2.5636879283040805
 norm_wiki_nv.txt, Conditional entropy of trigrams: 2.3675796217851945
-norm_wiki_so.txt, Conditional entropy of bigrams: 3.02776299736853
+norm_wiki_nv.txt, Conditional entropy of quadgrams: 1.79526291261169
+norm_wiki_so.txt, Conditional entropy of bigrams: 3.29956587314573
 norm_wiki_so.txt, Conditional entropy of trigrams: 2.8443716239168686
+norm_wiki_so.txt, Conditional entropy of quadgrams: 2.3743105921763106
+
+Average conditional entropy of bigrams: 2.933968023324481
+Average conditional entropy of trigrams: 2.761931456035593
+Average conditional entropy of quadgrams: 2.1855448390874597
+Min conditional entropy of bigrams: 2.5636879283040805
+Min conditional entropy of trigrams: 2.2735248312675
+Min conditional entropy of quadgrams: 1.4921524582642953
+Max conditional entropy of bigrams: 3.29956587314573
+Max conditional entropy of trigrams: 3.1344061132057193
+Max conditional entropy of quadgrams: 2.6108656535505492
+
