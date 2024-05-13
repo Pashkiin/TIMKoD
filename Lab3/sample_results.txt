@@ -83,9 +83,9 @@ Max conditional entropy of quadgrams words: 1.2640890740095818
 
 ANWSERS FOR TASK 3
 Results:
-sample0 - true : wszystkie wartości entropii oraz entropii warunkowej na niskim poziomie
-sample1 - true : wartości entropii oraz entropii warunkowej wyższe jednak zawierają się w granicach danych testowych
-sample2 - true : niskie wartości entropii, a wartości entropii warunkowej w okolicach średnich z danych testowych
-sample3 - true : dobre wartości entropii, a wartości entropii warunkowej bardzo blisko średnich z danych testowych, jednak wartośc entropi warunkowej 3-go stopnia dla wyrazów wydaje się duża w porównaniu do próbki testowej
-sample4 - false : entropia słów jest zdecydowanie za duża w porównaniu do danych testowych
-sample5 - false : entropia słów jest zdecydowanie za duża w porównaniu do danych testowych
+sample0 - fake : wartość entropii słów oraz entropii warunkowej słów 1-szego stopnia mają bardzo podobne wartości, żaden z języków testowych się tak nie zachowuje
+sample1 - real : wartości entropii oraz entropii warunkowej wyższe jednak zawierają się w granicach danych testowych
+sample2 - fake : wartość entropii słów oraz entropii warunkowej słów 1-szego stopnia mają bardzo podobne wartości, żaden z języków testowych się tak nie zachowuje
+sample3 - real : dobre wartości entropii, a wartości entropii warunkowej bardzo blisko średnich z danych testowych, jednak wartośc entropi warunkowej 3-go stopnia dla wyrazów wydaje się duża w porównaniu do próbki testowej
+sample4 - fake : entropia słów jest zdecydowanie za duża w porównaniu do danych testowych
+sample5 - fake : entropia słów jest zdecydowanie za duża w porównaniu do danych testowych
